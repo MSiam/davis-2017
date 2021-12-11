@@ -82,6 +82,8 @@ if __name__ == '__main__':
   # Evaluate results
   evaluation = db_eval(db,segmentations,args.metrics)
 
+  cfg.PATH['DATA'] = 'DATA_PATH'
+
   # Print results
   table = PrettyTable(['Method']+[p[0]+'_'+p[1] for p in
     itertools.product(args.metrics,cfg.EVAL.STATISTICS)])

@@ -10,7 +10,7 @@ def imread_indexed(filename):
   im = Image.open(filename)
 
   annotation = np.atleast_3d(im)[...,0]
-  return annotation,np.array(im.getpalette()).reshape((-1,3))
+  return annotation, None#,np.array(im.getpalette()).reshape((-1,3))
 
 def imwrite_indexed(filename,array,color_palette=cfg.palette):
   """ Save indexed png."""
